@@ -25,7 +25,7 @@ function getEnvironment() {
  * @param {string} name - The name to welcome
  * @returns {string} Welcome message
  */
-function warmUp(name = 'Alice') {
+function warmUp(name = 'Adventurer') {
   // TODO: Return "Welcome [name] to CodeQuest!"
   return `Welcome ${name} to CodeQuest!`;
   // Your code here
