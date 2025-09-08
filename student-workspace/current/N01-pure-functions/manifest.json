@@ -1,0 +1,64 @@
+{
+  "id": "N01-pure-functions",
+  "act": "act-1", 
+  "title": "Pure Functions",
+  "type": "core",
+  "difficulty": "beginner",
+  "estimatedTime": "10-15min",
+  "version": "2.3.0",
+  "description": "Maîtriser les fonctions pures : add(), isEven(), sum() sans effets de bord",
+  "objectives": [
+    "Comprendre le concept de fonction pure",
+    "Implémenter add(a,b) pour addition", 
+    "Implémenter isEven(n) pour parité",
+    "Implémenter sum(arr) pour somme tableau",
+    "Éviter tous les effets de bord"
+  ],
+  "prerequisites": [
+    "basic-functions",
+    "arithmetic-operators",
+    "array-basics"
+  ],
+  "skills": [
+    "pure-functions",
+    "functional-programming", 
+    "no-side-effects",
+    "mathematical-operations"
+  ],
+  "files": {
+    "starter": "starter.js",
+    "solution": "solution.js",
+    "tests": "tests.spec.js", 
+    "readme": "README.md"
+  },
+  "hints": {
+    "available": 3,
+    "files": [
+      "hints/H1.md",
+      "hints/H2.md",
+      "hints/H3.md"
+    ]
+  },
+  "validation": {
+    "testCommand": "node tests.spec.js",
+    "criteria": {
+      "base": {
+        "description": "Tous les tests passent",
+        "condition": "testsPass"
+      },
+      "star": {
+        "description": "Terminé rapidement ou sans aide", 
+        "condition": "timeUnder:600 OR noHints:true"
+      },
+      "trophy": {
+        "description": "Code ≤ 5 lignes cumulées total",
+        "condition": "totalLines:5"
+      }
+    }
+  },
+  "metadata": {
+    "created": "2024-01-01", 
+    "tags": ["pure-functions", "functional", "basics"],
+    "language": "javascript"
+  }
+}

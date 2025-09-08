@@ -1,0 +1,32 @@
+{
+  "id": "N02-destructuring",
+  "act": "act-1",
+  "title": "Destructuring & Rest/Spread",
+  "type": "core",
+  "difficulty": "beginner-intermediate",
+  "estimatedTime": "10-15min",
+  "version": "2.3.0",
+  "description": "Maîtriser destructuring, rest/spread et immutabilité",
+  "objectives": [
+    "Utiliser destructuring pour extraire propriétés",
+    "Maîtriser rest/spread operators",
+    "Fusionner objets sans mutation",
+    "Respecter immutabilité avec Object.freeze"
+  ],
+  "validation": {
+    "criteria": {
+      "base": {
+        "description": "Tous les tests passent",
+        "criteria": "testsPass"
+      },
+      "star": {
+        "description": "Terminé rapidement ou sans aide",
+        "criteria": "timeUnder:600 OR noHints:true"
+      },
+      "trophy": {
+        "description": "Aucune mutation (Object.freeze dans tests)",
+        "criteria": "custom"
+      }
+    }
+  }
+}

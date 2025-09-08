@@ -1,0 +1,16 @@
+{
+  "base": {
+    "tests_pass": true,
+    "no_syntax_errors": true,
+    "function_exists": true
+  },
+  "bonus": {
+    "completion_time_under": 300,
+    "no_hints_used": true
+  },
+  "challenge": {
+    "code_minimal": true,
+    "single_return": true,
+    "no_temp_vars": true
+  }
+}

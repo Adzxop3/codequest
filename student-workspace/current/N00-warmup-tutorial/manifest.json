@@ -1,0 +1,71 @@
+{
+  "id": "N00",
+  "title": "Warmup & CLI Tutorial",
+  "description": "Validation environnement et familiarisation avec le workflow CodeQuest CLI",
+  "estimatedTime": 10,
+  "difficulty": 1,
+  "concepts": [
+    "environment setup", 
+    "cli workflow",
+    "basic functions",
+    "testing mindset"
+  ],
+  "files": {
+    "starter": "starter.js",
+    "solution": "solution.js",
+    "tests": "tests.spec.js"
+  },
+  "objectives": [
+    "Valider que Node.js fonctionne correctement",
+    "Comprendre le cycle start → code → validate",
+    "Implémenter une fonction ping() basique",
+    "Maîtriser les commandes CLI essentielles"
+  ],
+  "prerequisites": [
+    "node-js-16+",
+    "terminal-access",
+    "text-editor"
+  ],
+  "skills": [
+    "environment-setup",
+    "cli-workflow", 
+    "basic-functions",
+    "testing-mindset"
+  ],
+  "files": {
+    "starter": "starter.js",
+    "solution": "solution.js", 
+    "tests": "tests.spec.js",
+    "readme": "README.md"
+  },
+  "hints": {
+    "available": 3,
+    "files": [
+      "hints/H1.md",
+      "hints/H2.md", 
+      "hints/H3.md"
+    ]
+  },
+  "validation": {
+    "testCommand": "node tests.spec.js",
+    "criteria": {
+      "base": {
+        "description": "Tous les tests passent",
+        "condition": "testsPass"
+      },
+      "star": {
+        "description": "Terminé rapidement ou sans aide",
+        "condition": "timeUnder:300 OR noHints:true"
+      },
+      "trophy": {
+        "description": "Code ultra-minimal : 1 return, 0 variable",
+        "condition": "singleReturn AND noTempVars"
+      }
+    }
+  },
+  "metadata": {
+    "created": "2024-01-01",
+    "tags": ["tutorial", "setup", "basics"],
+    "language": "javascript"
+  }
+}

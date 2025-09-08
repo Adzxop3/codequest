@@ -2,7 +2,25 @@
  * N00: System Check & Warm-up - Test Suite
  */
 
-const { getEnvironment, warmUp } = require('./starter/index');
+const {
+  getEnvironment,
+  warmUp,
+  // extras
+  greetUpper,
+  reverseString,
+  repeatString,
+  parseSemver,
+  isNodeGte,
+  sumRange,
+  factorial,
+  isPrime,
+  toKebab,
+  formatBytes,
+  range,
+  uniqueSorted,
+  chunkArray,
+  median
+} = require('./starter/index');
 
 const startTime = Date.now();
 let passed = 0;
@@ -74,6 +92,86 @@ test('warmUp uses default name when no argument', () => {
 test('Node.js version is 16 or higher', () => {
   const version = parseInt(process.version.slice(1).split('.')[0]);
   assert(version >= 16, `Node.js version ${process.version} is too old. Need v16+`);
+});
+
+// Extras: 20 Warm-up mini-challenges
+// Simples
+test('greetUpper formats upper message', () => {
+  const msg = greetUpper('Bob');
+  assert(msg === 'HELLO, Bob!', `Expected 'HELLO, Bob!' but got '${msg}'`);
+});
+
+test('reverseString returns reversed string', () => {
+  const res = reverseString('abc');
+  assert(res === 'cba', `Expected 'cba' but got '${res}'`);
+});
+
+test('repeatString repeats without side effects', () => {
+  const res = repeatString('ab', 3);
+  assert(res === 'ababab', `Expected 'ababab' but got '${res}'`);
+});
+
+test('parseSemver parses v16.14.2', () => {
+  const res = parseSemver('v16.14.2');
+  assert(
+    res && res.major === 16 && res.minor === 14 && res.patch === 2,
+    `Expected {16,14,2} but got ${JSON.stringify(res)}`
+  );
+});
+
+test('isNodeGte true for very low requirement', () => {
+  const ok = isNodeGte('0.0.1');
+  assert(ok === true, 'Expected true for 0.0.1');
+});
+
+// Faciles
+test('sumRange computes 1..n', () => {
+  const res = sumRange(5);
+  assert(res === 15, `Expected 15 but got ${res}`);
+});
+
+test('factorial(5) is 120', () => {
+  const res = factorial(5);
+  assert(res === 120, `Expected 120 but got ${res}`);
+});
+
+test('isPrime detects primes', () => {
+  const res = isPrime(7);
+  assert(res === true, 'Expected true for 7');
+});
+
+test('toKebab converts string to kebab-case', () => {
+  const res = toKebab('Hello World_test');
+  assert(res === 'hello-world-test', `Expected 'hello-world-test' but got '${res}'`);
+});
+
+test('formatBytes formats 1024 as 1 KB', () => {
+  const res = formatBytes(1024);
+  assert(res === '1 KB', `Expected '1 KB' but got '${res}'`);
+});
+
+// Moyens
+test('range generates arithmetic progression', () => {
+  const res = range(1, 5, 2);
+  const exp = [1, 3, 5];
+  assert(JSON.stringify(res) === JSON.stringify(exp), `Expected ${JSON.stringify(exp)} but got ${JSON.stringify(res)}`);
+});
+
+test('uniqueSorted returns unique values sorted asc', () => {
+  const res = uniqueSorted([3, 1, 3, 2]);
+  const exp = [1, 2, 3];
+  assert(JSON.stringify(res) === JSON.stringify(exp), `Expected ${JSON.stringify(exp)} but got ${JSON.stringify(res)}`);
+});
+
+test('chunkArray splits into chunks of size', () => {
+  const res = chunkArray([1, 2, 3, 4, 5], 2);
+  const exp = [[1, 2], [3, 4], [5]];
+  assert(JSON.stringify(res) === JSON.stringify(exp), `Expected ${JSON.stringify(exp)} but got ${JSON.stringify(res)}`);
+});
+
+test('median computes median for odd length', () => {
+  const res = median([1, 3, 5]);
+  assert(res === 3, `Expected 3 but got ${res}`);
 });
 
 // Summary

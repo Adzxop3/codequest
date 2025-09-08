@@ -1,0 +1,32 @@
+{
+  "id": "N06-boss-integration",
+  "act": "act-1",
+  "title": "Boss Integration",
+  "type": "core",
+  "difficulty": "beginner-intermediate",
+  "estimatedTime": "20-25min",
+  "version": "2.3.0",
+  "description": "Projet intégration : transformer données en scoreboard",
+  "objectives": [
+    "Intégrer tous les concepts précédents",
+    "Pipeline complet data → scoreboard",
+    "Tri, calculs, formatage en une chaîne",
+    "Code maintenable et performant"
+  ],
+  "validation": {
+    "criteria": {
+      "base": {
+        "description": "Tous les tests passent",
+        "criteria": "testsPass"
+      },
+      "star": {
+        "description": "Terminé rapidement ou sans aide",
+        "criteria": "timeUnder:600 OR noHints:true"
+      },
+      "trophy": {
+        "description": "Max 3 passes sur les données",
+        "criteria": "custom"
+      }
+    }
+  }
+}

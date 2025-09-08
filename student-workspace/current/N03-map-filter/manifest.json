@@ -1,0 +1,32 @@
+{
+  "id": "N03-map-filter",
+  "act": "act-1",
+  "title": "Map/Filter Pipeline",
+  "type": "core",
+  "difficulty": "beginner-intermediate",
+  "estimatedTime": "10-15min",
+  "version": "2.3.0",
+  "description": "Pipeline de transformation avec map/filter, éviter les boucles",
+  "objectives": [
+    "Transformer données avec .map()",
+    "Filtrer éléments avec .filter()",
+    "Chaîner opérations en pipeline",
+    "Éviter boucles for classiques"
+  ],
+  "validation": {
+    "criteria": {
+      "base": {
+        "description": "Tous les tests passent",
+        "criteria": "testsPass"
+      },
+      "star": {
+        "description": "Terminé rapidement ou sans aide",
+        "criteria": "timeUnder:600 OR noHints:true"
+      },
+      "trophy": {
+        "description": "Zéro if (utiliser prédicats/composition)",
+        "criteria": "custom"
+      }
+    }
+  }
+}

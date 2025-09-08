@@ -1,0 +1,14 @@
+{
+  "base": {
+    "tests_pass": true,
+    "no_syntax_errors": true
+  },
+  "bonus": {
+    "performance_optimized": true,
+    "error_handling": true
+  },
+  "challenge": {
+    "elegant_implementation": true,
+    "advanced_patterns": true
+  }
+}
