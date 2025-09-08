@@ -8,16 +8,13 @@
  * @returns {Object} Environment details with node version, platform, and ready status
  */
 function getEnvironment() {
-  // TODO: Return an object with:
-  // - node: process.version (Node.js version)
-  // - platform: process.platform (OS platform)
-  // - ready: true if node version >= 16
+  const v = (process.versions?.node || process.version.replace(/^v/, '')); 
+  const major = parseInt(v.split('.'), 10); // récupère la version majeure 
   return {
-    node: process.version,
-    platform: process.platform,
-    ready: true
+    node: process.version,            // conserve le préfixe "v" tel quel 
+    platform: process.platform,       // plateforme en cours 
+    ready: major >= 16                
   };
-  // Your code here
 }
 
 /**
@@ -25,10 +22,8 @@ function getEnvironment() {
  * @param {string} name - The name to welcome
  * @returns {string} Welcome message
  */
-function warmUp() {
-  // TODO: Return "Welcome [name] to CodeQuest!"
+function warmUp(name = 'Adventurer') { 
   return `Welcome ${name} to CodeQuest!`;
-  // Your code here
 }
 
 /**
